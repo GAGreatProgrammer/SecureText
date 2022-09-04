@@ -15,11 +15,14 @@ namespace SecureText
         int CharactersCount = 0;
 
 
+
         public SecureText()
         {
             InitializeComponent();
             this.Icon = Properties.Resources.Icon;
         }
+
+
 
         private const int CS_DROPSHADOW = 0x00020000;
         protected override CreateParams CreateParams
@@ -31,6 +34,8 @@ namespace SecureText
                 return cp;
             }
         }
+
+
 
         private void SecureText_Load(object sender, EventArgs e)
         {
@@ -214,6 +219,8 @@ namespace SecureText
                 btnGeneratePassword.Enabled = true;
             }
         }
+
+
 
         private void txtText_TextChanged(object sender, EventArgs e)
         {
