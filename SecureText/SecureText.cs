@@ -14,10 +14,10 @@ namespace SecureText
         string DecryptedData = null;
         int CharactersCount = 0;
 
+
         public SecureText()
         {
             InitializeComponent();
-
             this.Icon = Properties.Resources.Icon;
         }
 
@@ -31,7 +31,6 @@ namespace SecureText
                 return cp;
             }
         }
-
 
         private void SecureText_Load(object sender, EventArgs e)
         {
