@@ -18,7 +18,7 @@ namespace SecureText.Classes
         {
             try
             {
-                char[] password = new char[15];
+                char[] password = new char[20];
                 string charSet = "";
 
 
@@ -32,7 +32,7 @@ namespace SecureText.Classes
 
                 charSet += Symbols;
 
-                for (int i = 0; i < 15; i++)
+                for (int i = 0; i < 20; i++)
                     password[i] = charSet[random.Next(charSet.Length - 1)];
 
                 return string.Join(null, password);

@@ -39,7 +39,7 @@ namespace SecureText
 
         private void SecureText_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnGeneratePassword_Click(object sender, EventArgs e)
@@ -126,7 +126,11 @@ namespace SecureText
         {
             txtText.Clear();
             txtPassword.Clear();
+
             txtText.Text = EncryptedData;
+
+            EncryptedData = null;
+            DecryptedData = null;
 
             btnEncrypt.Enabled = true;
             btnDecrypt.Enabled = true;
@@ -184,7 +188,11 @@ namespace SecureText
         {
             txtText.Clear();
             txtPassword.Clear();
+
             txtText.Text = DecryptedData;
+
+            EncryptedData = null;
+            DecryptedData = null;
 
             btnEncrypt.Enabled = true;
             btnDecrypt.Enabled = true;
@@ -221,6 +229,25 @@ namespace SecureText
         }
 
 
+        private void txtPassword_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtPassword.Text))
+            {
+                Clipboard.SetText(txtPassword.Text);
+                sbMessage.Show(this, "Password copied!", BunifuSnackbar.MessageTypes.Success,
+                duration: 3000, position: BunifuSnackbar.Positions.TopCenter);
+            }
+        }
+
+        private void txtPassword_DoubleClick(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtPassword.Text))
+            {
+                Clipboard.SetText(txtPassword.Text);
+                sbMessage.Show(this, "Password copied!", BunifuSnackbar.MessageTypes.Success,
+                duration: 3000, position: BunifuSnackbar.Positions.TopCenter);
+            }
+        }
 
         private void txtText_TextChanged(object sender, EventArgs e)
         {
@@ -233,6 +260,11 @@ namespace SecureText
                 sbMessage.Show(this, "Maximum text size reached!", BunifuSnackbar.MessageTypes.Warning,
                     duration: 3000, position: BunifuSnackbar.Positions.TopCenter);
             }
+        }
+
+        private void bunifuUserControl1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

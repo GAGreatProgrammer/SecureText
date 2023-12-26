@@ -34,15 +34,11 @@ namespace SecureText
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges33 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges34 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges35 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties65 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties66 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties67 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties68 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges36 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties69 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties70 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties71 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties72 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties33 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties34 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties35 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties36 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -50,12 +46,11 @@ namespace SecureText
             this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel6 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.Elipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.btnClose = new Bunifu.UI.WinForms.BunifuImageButton();
             this.btnDecrypt = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnCopy = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnEncrypt = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-            this.txtText = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btnGeneratePassword = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.txtPassword = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bgwEncrypt = new System.ComponentModel.BackgroundWorker();
@@ -64,6 +59,8 @@ namespace SecureText
             this.sbMessage = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
             this.bunifuLabel7 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblCount = new Bunifu.UI.WinForms.BunifuLabel();
+            this.txtText = new System.Windows.Forms.RichTextBox();
+            this.bunifuUserControl1 = new Bunifu.UI.WinForms.BunifuUserControl();
             this.SuspendLayout();
             // 
             // bunifuLabel3
@@ -136,7 +133,7 @@ namespace SecureText
             this.cboProcedure.FillDropDown = true;
             this.cboProcedure.FillIndicator = false;
             this.cboProcedure.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboProcedure.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboProcedure.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboProcedure.ForeColor = System.Drawing.Color.White;
             this.cboProcedure.FormattingEnabled = true;
             this.cboProcedure.Icon = null;
@@ -145,9 +142,9 @@ namespace SecureText
             this.cboProcedure.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
             this.cboProcedure.IndicatorThickness = 2;
             this.cboProcedure.IsDropdownOpened = false;
-            this.cboProcedure.ItemBackColor = System.Drawing.Color.White;
-            this.cboProcedure.ItemBorderColor = System.Drawing.Color.White;
-            this.cboProcedure.ItemForeColor = System.Drawing.Color.Black;
+            this.cboProcedure.ItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(35)))));
+            this.cboProcedure.ItemBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(35)))));
+            this.cboProcedure.ItemForeColor = System.Drawing.Color.White;
             this.cboProcedure.ItemHeight = 31;
             this.cboProcedure.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.cboProcedure.ItemHighLightForeColor = System.Drawing.Color.White;
@@ -216,10 +213,10 @@ namespace SecureText
             this.bunifuLabel6.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel6.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // bunifuElipse1
+            // Elipse
             // 
-            this.bunifuElipse1.ElipseRadius = 20;
-            this.bunifuElipse1.TargetControl = this;
+            this.Elipse.ElipseRadius = 20;
+            this.Elipse.TargetControl = this;
             // 
             // btnClose
             // 
@@ -526,83 +523,6 @@ namespace SecureText
             this.btnEncrypt.UseDefaultRadiusAndThickness = true;
             this.btnEncrypt.Click += new System.EventHandler(this.btnEncrypt_Click);
             // 
-            // txtText
-            // 
-            this.txtText.AcceptsReturn = false;
-            this.txtText.AcceptsTab = false;
-            this.txtText.AnimationSpeed = 200;
-            this.txtText.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtText.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtText.AutoSizeHeight = true;
-            this.txtText.BackColor = System.Drawing.Color.Transparent;
-            this.txtText.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtText.BackgroundImage")));
-            this.txtText.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(161)))), ((int)(((byte)(250)))));
-            this.txtText.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.txtText.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(161)))), ((int)(((byte)(250)))));
-            this.txtText.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(161)))), ((int)(((byte)(250)))));
-            this.txtText.BorderRadius = 10;
-            this.txtText.BorderThickness = 2;
-            this.txtText.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtText.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtText.DefaultFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtText.DefaultText = "";
-            this.txtText.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(35)))));
-            this.txtText.ForeColor = System.Drawing.Color.White;
-            this.txtText.HideSelection = true;
-            this.txtText.IconLeft = null;
-            this.txtText.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtText.IconPadding = 10;
-            this.txtText.IconRight = null;
-            this.txtText.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtText.Lines = new string[0];
-            this.txtText.Location = new System.Drawing.Point(30, 200);
-            this.txtText.MaxLength = 32767;
-            this.txtText.MinimumSize = new System.Drawing.Size(1, 1);
-            this.txtText.Modified = false;
-            this.txtText.Multiline = true;
-            this.txtText.Name = "txtText";
-            stateProperties65.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(161)))), ((int)(((byte)(250)))));
-            stateProperties65.FillColor = System.Drawing.Color.Empty;
-            stateProperties65.ForeColor = System.Drawing.Color.Empty;
-            stateProperties65.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtText.OnActiveState = stateProperties65;
-            stateProperties66.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties66.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(35)))));
-            stateProperties66.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties66.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtText.OnDisabledState = stateProperties66;
-            stateProperties67.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(161)))), ((int)(((byte)(250)))));
-            stateProperties67.FillColor = System.Drawing.Color.Empty;
-            stateProperties67.ForeColor = System.Drawing.Color.Empty;
-            stateProperties67.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtText.OnHoverState = stateProperties67;
-            stateProperties68.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(161)))), ((int)(((byte)(250)))));
-            stateProperties68.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(35)))));
-            stateProperties68.ForeColor = System.Drawing.Color.White;
-            stateProperties68.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtText.OnIdleState = stateProperties68;
-            this.txtText.Padding = new System.Windows.Forms.Padding(3);
-            this.txtText.PasswordChar = '\0';
-            this.txtText.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.txtText.PlaceholderText = "";
-            this.txtText.ReadOnly = false;
-            this.txtText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtText.SelectedText = "";
-            this.txtText.SelectionLength = 0;
-            this.txtText.SelectionStart = 0;
-            this.txtText.ShortcutsEnabled = true;
-            this.txtText.Size = new System.Drawing.Size(740, 370);
-            this.txtText.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtText.TabIndex = 16;
-            this.txtText.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtText.TextMarginBottom = 0;
-            this.txtText.TextMarginLeft = 3;
-            this.txtText.TextMarginTop = 1;
-            this.txtText.TextPlaceholder = "";
-            this.txtText.UseSystemPasswordChar = false;
-            this.txtText.WordWrap = true;
-            this.txtText.TextChanged += new System.EventHandler(this.txtText_TextChanged);
-            // 
             // btnGeneratePassword
             // 
             this.btnGeneratePassword.AllowAnimations = true;
@@ -711,7 +631,7 @@ namespace SecureText
             this.txtPassword.BorderThickness = 2;
             this.txtPassword.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPassword.DefaultFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.DefaultFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.DefaultText = "";
             this.txtPassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(35)))));
             this.txtPassword.ForeColor = System.Drawing.Color.White;
@@ -728,26 +648,26 @@ namespace SecureText
             this.txtPassword.Modified = false;
             this.txtPassword.Multiline = false;
             this.txtPassword.Name = "txtPassword";
-            stateProperties69.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(161)))), ((int)(((byte)(250)))));
-            stateProperties69.FillColor = System.Drawing.Color.Empty;
-            stateProperties69.ForeColor = System.Drawing.Color.Empty;
-            stateProperties69.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtPassword.OnActiveState = stateProperties69;
-            stateProperties70.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties70.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(35)))));
-            stateProperties70.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties70.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtPassword.OnDisabledState = stateProperties70;
-            stateProperties71.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(161)))), ((int)(((byte)(250)))));
-            stateProperties71.FillColor = System.Drawing.Color.Empty;
-            stateProperties71.ForeColor = System.Drawing.Color.Empty;
-            stateProperties71.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtPassword.OnHoverState = stateProperties71;
-            stateProperties72.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(161)))), ((int)(((byte)(250)))));
-            stateProperties72.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(35)))));
-            stateProperties72.ForeColor = System.Drawing.Color.White;
-            stateProperties72.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtPassword.OnIdleState = stateProperties72;
+            stateProperties33.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(161)))), ((int)(((byte)(250)))));
+            stateProperties33.FillColor = System.Drawing.Color.Empty;
+            stateProperties33.ForeColor = System.Drawing.Color.Empty;
+            stateProperties33.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtPassword.OnActiveState = stateProperties33;
+            stateProperties34.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties34.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(35)))));
+            stateProperties34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties34.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtPassword.OnDisabledState = stateProperties34;
+            stateProperties35.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(161)))), ((int)(((byte)(250)))));
+            stateProperties35.FillColor = System.Drawing.Color.Empty;
+            stateProperties35.ForeColor = System.Drawing.Color.Empty;
+            stateProperties35.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtPassword.OnHoverState = stateProperties35;
+            stateProperties36.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(161)))), ((int)(((byte)(250)))));
+            stateProperties36.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(35)))));
+            stateProperties36.ForeColor = System.Drawing.Color.White;
+            stateProperties36.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtPassword.OnIdleState = stateProperties36;
             this.txtPassword.Padding = new System.Windows.Forms.Padding(3);
             this.txtPassword.PasswordChar = '\0';
             this.txtPassword.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
@@ -758,7 +678,7 @@ namespace SecureText
             this.txtPassword.SelectionLength = 0;
             this.txtPassword.SelectionStart = 0;
             this.txtPassword.ShortcutsEnabled = true;
-            this.txtPassword.Size = new System.Drawing.Size(320, 39);
+            this.txtPassword.Size = new System.Drawing.Size(320, 40);
             this.txtPassword.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtPassword.TabIndex = 13;
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -768,6 +688,8 @@ namespace SecureText
             this.txtPassword.TextPlaceholder = "";
             this.txtPassword.UseSystemPasswordChar = false;
             this.txtPassword.WordWrap = true;
+            this.txtPassword.Click += new System.EventHandler(this.txtPassword_Click);
+            this.txtPassword.DoubleClick += new System.EventHandler(this.txtPassword_DoubleClick);
             // 
             // bgwEncrypt
             // 
@@ -887,19 +809,58 @@ namespace SecureText
             this.lblCount.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblCount.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
+            // txtText
+            // 
+            this.txtText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(35)))));
+            this.txtText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtText.ForeColor = System.Drawing.Color.White;
+            this.txtText.Location = new System.Drawing.Point(38, 208);
+            this.txtText.Name = "txtText";
+            this.txtText.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.txtText.Size = new System.Drawing.Size(725, 360);
+            this.txtText.TabIndex = 32;
+            this.txtText.Text = "";
+            this.txtText.TextChanged += new System.EventHandler(this.txtText_TextChanged);
+            // 
+            // bunifuUserControl1
+            // 
+            this.bunifuUserControl1.AllowAnimations = false;
+            this.bunifuUserControl1.AllowBorderColorChanges = false;
+            this.bunifuUserControl1.AllowMouseEffects = false;
+            this.bunifuUserControl1.AnimationSpeed = 200;
+            this.bunifuUserControl1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuUserControl1.BackgroundColor = System.Drawing.Color.Transparent;
+            this.bunifuUserControl1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(161)))), ((int)(((byte)(250)))));
+            this.bunifuUserControl1.BorderRadius = 15;
+            this.bunifuUserControl1.BorderStyle = Bunifu.UI.WinForms.BunifuUserControl.BorderStyles.Solid;
+            this.bunifuUserControl1.BorderThickness = 2;
+            this.bunifuUserControl1.ColorContrastOnClick = 30;
+            this.bunifuUserControl1.ColorContrastOnHover = 30;
+            this.bunifuUserControl1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuUserControl1.Image = null;
+            this.bunifuUserControl1.ImageMargin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.bunifuUserControl1.Location = new System.Drawing.Point(30, 200);
+            this.bunifuUserControl1.Name = "bunifuUserControl1";
+            this.bunifuUserControl1.ShowBorders = true;
+            this.bunifuUserControl1.Size = new System.Drawing.Size(740, 374);
+            this.bunifuUserControl1.Style = Bunifu.UI.WinForms.BunifuUserControl.UserControlStyles.Flat;
+            this.bunifuUserControl1.TabIndex = 33;
+            this.bunifuUserControl1.Click += new System.EventHandler(this.bunifuUserControl1_Click);
+            // 
             // SecureText
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(43)))), ((int)(((byte)(56)))));
             this.ClientSize = new System.Drawing.Size(800, 650);
+            this.Controls.Add(this.txtText);
             this.Controls.Add(this.lblCount);
             this.Controls.Add(this.bunifuLabel7);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnDecrypt);
             this.Controls.Add(this.btnCopy);
             this.Controls.Add(this.btnEncrypt);
-            this.Controls.Add(this.txtText);
             this.Controls.Add(this.bunifuLabel6);
             this.Controls.Add(this.btnGeneratePassword);
             this.Controls.Add(this.txtPassword);
@@ -909,6 +870,7 @@ namespace SecureText
             this.Controls.Add(this.bunifuLabel3);
             this.Controls.Add(this.bunifuLabel2);
             this.Controls.Add(this.bunifuLabel1);
+            this.Controls.Add(this.bunifuUserControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SecureText";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -930,18 +892,19 @@ namespace SecureText
         private Bunifu.UI.WinForms.BunifuTextBox txtPassword;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel6;
-        private Bunifu.UI.WinForms.BunifuTextBox txtText;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnCopy;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnEncrypt;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnDecrypt;
         private Bunifu.UI.WinForms.BunifuImageButton btnClose;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private Bunifu.Framework.UI.BunifuElipse Elipse;
         private System.ComponentModel.BackgroundWorker bgwEncrypt;
         private System.ComponentModel.BackgroundWorker bgwDecrypt;
         private Bunifu.Framework.UI.BunifuDragControl DragControl;
         private Bunifu.UI.WinForms.BunifuSnackbar sbMessage;
         private Bunifu.UI.WinForms.BunifuLabel lblCount;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel7;
+        private System.Windows.Forms.RichTextBox txtText;
+        private Bunifu.UI.WinForms.BunifuUserControl bunifuUserControl1;
     }
 }
 
