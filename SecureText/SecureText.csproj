@@ -152,9 +152,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Decryptor.cs" />
-    <Compile Include="Classes\DropShadow.cs" />
     <Compile Include="Classes\Encryptor.cs" />
     <Compile Include="Classes\GeneratePassword.cs" />
+    <Compile Include="Classes\RC4_Algorithm.cs" />
     <Compile Include="SecureText.cs">
       <SubType>Form</SubType>
     </Compile>
